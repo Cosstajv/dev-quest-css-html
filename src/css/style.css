@@ -1,0 +1,130 @@
+body {
+    min-height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%) ;
+}
+
+.hero {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.hero .content {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 0 40px;
+}
+
+.hero .content .header img {
+    padding-bottom: 20px;
+}
+
+.hero .content .main-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero .content .main-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #fff;
+}
+
+.hero .content .main-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.hero .content .main-content a{
+    display: inline-block;
+    font-size: 17px;
+    padding: 13px 55px;
+    background-color: #fff;
+    color: hsl(257, 40%, 49%);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    box-shadow: 0 8px 17px -8px rgba(0,0,0,0.8);
+    transition: 0.3s ease-in-out;
+}
+
+.hero .content .main-content a:hover {
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.hero .content .social {
+    text-align: right;
+}
+
+.hero .content .social a i {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .content .social a:not(:first-child) {
+    margin-left: 32px;
+}
+
+.hero .content .social a i::after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left: -14px;
+    bottom: -13px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .content .social a:nth-child(2) {
+    margin-left: 39px;
+}
+
+.hero .content .social a:hover i {
+    color: hsl(300, 69%, 71%);
+}
+
+.hero .content .social a i:hover::after {
+    border-color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 1440px) {
+    .hero-img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .content .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .content .main-content h1 {
+        font-size: 25px;
+    }
+
+    .hero .content .social {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .hero .content .main-content a {
+        padding: 10px 70px;
+    }
+}
